@@ -25,6 +25,9 @@ import { DetalleComponent } from './ingreso-egreso/detalle/detalle.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { OrdenIngresosPipe } from './pipes/orden-ingresos.pipe';
+
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,8 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     DetalleComponent,
     FooterComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    OrdenIngresosPipe
   ],
   imports: [
     BrowserModule,
@@ -51,6 +55,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
       maxAge: 25,
       logOnly: environment.production,
     }),
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
