@@ -23,7 +23,7 @@ export class DetalleComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.ingresosSubs = this.store.select('ingresosEgresos')
+    this.ingresosSubs = this.store.select('IngresoEgreso')
       .subscribe( ( {items} ) => this.ingresosEgresos = items );
   }
 
