@@ -37,8 +37,8 @@ export class AuthService {
           });
         }else{
           this._user = null;
+          this.userSubscription?.unsubscribe();
           this.store.dispatch( ieActions.unSetItems() );
-          this.userSubscription.unsubscribe();
           this.store.dispatch( authActions.unSetUser() );
       }
     });

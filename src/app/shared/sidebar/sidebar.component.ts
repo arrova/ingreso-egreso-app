@@ -16,7 +16,7 @@ import { filter } from 'rxjs/operators';
 })
 export class SidebarComponent implements OnInit, OnDestroy {
 
-  user: Usuario;
+  nombre = '';
   userSub: Subscription;
 
   constructor(
@@ -28,10 +28,10 @@ export class SidebarComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.userSub = this.store.select('auth')
       .pipe(
-        filter( auth => auth.user != null )
+        filter( ({ user }) => user != null )
       )
       .subscribe( ({user}) => {
-        this.user = user;
+        this.nombre = user?.nombre;
       });
   }
 

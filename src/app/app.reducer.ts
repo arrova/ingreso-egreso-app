@@ -13,5 +13,5 @@ export interface AppState {
 export const appReducers: ActionReducerMap<AppState> = {
    ui: ui.uiReducer,
    auth: auth.authReducer,
-   ingresosEgresos: ingresoEgreso.ingresoEgresoReducer
+   // ingresosEgresos: ingresoEgreso.ingresoEgresoReducer
 }
